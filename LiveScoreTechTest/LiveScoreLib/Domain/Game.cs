@@ -6,7 +6,7 @@ public enum TeamType
     Away
 }
 
-internal class Game
+public class Game
 {
     public string HomeTeam {init; get; }
     public string AwayTeam {init; get; }
