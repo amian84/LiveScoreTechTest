@@ -4,7 +4,7 @@ using LiveScoreLib.Domain;
 
 namespace LiveScoreLib.Infrastructure;
 
-public class MemoryRepository:IRepository<Game>
+internal class MemoryRepository:IRepository<Game>
 {
     private ConcurrentDictionary<int, Game> InMemoryDb { get; } = new();
     public Task<IEnumerable<Game>> GetAllAsync()

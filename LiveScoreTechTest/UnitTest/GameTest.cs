@@ -35,4 +35,18 @@ public class GameTest
         //Assert
         Assert.Equal(1, team == TeamType.Away ? game.AwayScore : game.HomeScore);
     }
+    
+    [Theory]
+    [InlineData(1,3)]
+    [InlineData(2,5)]
+    public void Game_Update_Score(int homeScore, int awayScore)
+    {
+        //Arrange
+        var game = new Game("team1", "team2");
+        //Act
+        game.UpdateScore(homeScore, awayScore);
+        //Assert
+        Assert.Equal(homeScore, game.HomeScore);
+        Assert.Equal(awayScore, game.AwayScore);
+    }
 }

@@ -1,6 +1,6 @@
 namespace LiveScoreLib.Application;
 
-public interface IRepository<T>
+internal interface IRepository<T>
 {
     Task<IEnumerable<T>> GetAllAsync();
     Task<bool> TryAddAsync(T entity);

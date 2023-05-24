@@ -6,7 +6,7 @@ public enum TeamType
     Away
 }
 
-public class Game
+internal class Game
 {
     public string HomeTeam {init; get; }
     public string AwayTeam {init; get; }
@@ -21,6 +21,12 @@ public class Game
         Finished = finished;
         AwayScore = awayScore;
         AwayTeam = awayTeam;
+    }
+
+    public void UpdateScore(int homeScore, int awayScore)
+    {
+        HomeScore = homeScore;
+        AwayScore = awayScore;
     }
 
     public void IncreaseScore(TeamType team)
