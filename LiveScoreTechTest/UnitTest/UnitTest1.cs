@@ -17,4 +17,14 @@ public class UnitTest1
         Assert.Equal(game.HomeScore, homeGoals);
         Assert.Equal(game.AwayScore, awayGoals);
     }
+
+    [Theory]
+    [InlineData(TeamType.Away)]
+    [InlineData(TeamType.Home)]
+    public void GameIncreaseScore(TeamType team)
+    {
+        var game = new Game("team1", "team2");
+        game.IncreaseScore(team);
+        Assert.Equal(1, team == TeamType.Away ? game.AwayScore : game.HomeScore);
+    }
 }
