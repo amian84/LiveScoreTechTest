@@ -9,5 +9,13 @@
     <ItemGroup>
         <InternalsVisibleTo Include="UnitTest" />
     </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LanguageExt.Core" Version="4.4.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Application\UseCases\" />
+    </ItemGroup>
     
 </Project>
