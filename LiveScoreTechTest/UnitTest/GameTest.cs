@@ -1,5 +1,4 @@
 using LiveScoreLib.Domain;
-
 namespace UnitTest;
 
 public class GameTest
@@ -16,11 +15,12 @@ public class GameTest
         var game = new Game(homeTeam, awayTeam, finished, homeGoals, awayGoals);
         
         //Assert
-        Assert.Equal(game.HomeTeam, homeTeam);
-        Assert.Equal(game.AwayTeam, awayTeam);
-        Assert.Equal(game.IsFinish(), finished);
-        Assert.Equal(game.HomeScore, homeGoals);
-        Assert.Equal(game.AwayScore, awayGoals);
+        Assert.Equal(homeTeam, game.HomeTeam);
+        Assert.Equal(awayTeam, game.AwayTeam);
+        Assert.Equal(finished, game.IsFinish());
+        Assert.Equal(homeGoals, game.HomeScore);
+        Assert.Equal(awayGoals, game.AwayScore);
+        Assert.True(DateTime.Now>game.StartGame);
     }
 
     [Theory]
@@ -49,4 +49,32 @@ public class GameTest
         Assert.Equal(homeScore, game.HomeScore);
         Assert.Equal(awayScore, game.AwayScore);
     }
+    
+    [Theory]
+    [InlineData(1,3, 4)]
+    [InlineData(2,5, 7)]
+    public void Game_Total_Score(int homeScore, int awayScore, int expected)
+    {
+        //Arrange
+        var game = new Game("team1", "team2", true, homeScore, awayScore);
+        //Act
+        var total = game.TotalScore();
+        //Assert
+        Assert.Equal(expected, total);
+    }
+    
+    [Theory]
+    [InlineData(1,3, "team1 1 - 3 team2 - Live True")]
+    [InlineData(2,5, "team1 2 - 5 team2 - Live True")]
+    public void Game_ToString(int homeScore, int awayScore, string expected)
+    {
+        //Arrange
+        var game = new Game("team1", "team2", true, homeScore, awayScore);
+        //Act
+        var gameStr = game.ToString();
+        //Assert
+        Assert.Equal(expected, gameStr);
+    }
+    
+    
 }

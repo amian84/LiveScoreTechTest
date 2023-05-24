@@ -8,9 +8,11 @@ public enum TeamType
 
 internal class Game
 {
+    public DateTime StartGame { init; get; }
+    public string GameId { init; get; }
     public string HomeTeam {init; get; }
     public string AwayTeam {init; get; }
-    private bool Finished { get; set; }
+    private bool Finished { set; get; }
     public int HomeScore {private set; get; }
     public int AwayScore {private set; get; }
 
@@ -21,6 +23,8 @@ internal class Game
         Finished = finished;
         AwayScore = awayScore;
         AwayTeam = awayTeam;
+        GameId = Guid.NewGuid().ToString();
+        StartGame = DateTime.Now;
     }
 
     public void UpdateScore(int homeScore, int awayScore)
@@ -35,4 +39,19 @@ internal class Game
     }
 
     public bool IsFinish() => Finished;
+
+    public override string ToString()
+    {
+        return $"{HomeTeam} {HomeScore} - {AwayScore} {AwayTeam} - Live {Finished}";
+    }
+
+    public int TotalScore()
+    {
+        return HomeScore + AwayScore;
+    }
+
+    public void FinishMatch()
+    {
+        Finished = false;
+    }
 }
