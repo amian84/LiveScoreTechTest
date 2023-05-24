@@ -6,7 +6,7 @@ namespace LiveScoreLib.Infrastructure;
 
 internal class MemoryRepository:IRepository<Game>
 {
-    private ConcurrentDictionary<int, Game> InMemoryDb { get; } = new();
+    private ConcurrentDictionary<string, Game> InMemoryDb { get; } = new();
     public Task<IEnumerable<Game>> GetAllAsync()
     {
         return Task.FromResult(InMemoryDb.Values.Select(x=>x));
@@ -14,18 +14,17 @@ internal class MemoryRepository:IRepository<Game>
 
     public Task<bool> TryAddAsync(Game entity)
     {
-        var last = InMemoryDb.Count;
-        return Task.FromResult(InMemoryDb.TryAdd(last + 1, entity));
+        return Task.FromResult(InMemoryDb.TryAdd(entity.GameId, entity));
     }
 
     public Task<bool> Exists(Game entity)
     {
-        return Task.FromResult(InMemoryDb.Values.Contains(entity));
+        return Task.FromResult(InMemoryDb.ContainsKey(entity.GameId));
     }
 
     public Task<bool> TryRemoveAsync(Game entity)
     {
-        var pair = InMemoryDb.First(kv => kv.Value == entity);
+        var pair = InMemoryDb.First(kv => kv.Key == entity.GameId);
         return Task.FromResult(InMemoryDb.TryRemove(pair));
     }
 
