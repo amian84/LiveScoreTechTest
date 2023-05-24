@@ -1,5 +1,5 @@
 using System.Collections.Concurrent;
-using LiveScoreLib.Application;
+using LiveScoreLib.Application.Abstractions;
 using LiveScoreLib.Domain;
 
 namespace LiveScoreLib.Infrastructure;

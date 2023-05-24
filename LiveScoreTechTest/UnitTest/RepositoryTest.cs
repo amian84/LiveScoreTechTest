@@ -1,4 +1,4 @@
-using LiveScoreLib.Application;
+using LiveScoreLib.Application.Abstractions;
 using LiveScoreLib.Domain;
 using LiveScoreLib.Infrastructure;
 
