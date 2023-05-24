@@ -1,13 +1,14 @@
 using LiveScoreLib.Application;
+using LiveScoreLib.Application.Abstractions;
 
 namespace LiveScoreLib.Domain;
 
-internal class LiveScore
+internal class LiveScoreGame : IScore<Game>
 {
     private Game? CurrentGame { get; set; }
     private IRepository<Game> Repository { get; set; }
 
-    public LiveScore(IRepository<Game> repository)
+    public LiveScoreGame(IRepository<Game> repository)
     {
         Repository = repository;
     }
@@ -43,12 +44,12 @@ internal class LiveScore
         return true;
     }
 
-    public IEnumerable<string> GetSummary()
+    public IEnumerable<string> GetSummaryStr()
     {
-        var internalSummary = GetInternalSummary().Result;
+        var internalSummary = GetSummary().Result;
         return internalSummary.Order(new GameComparer()).Reverse().Select(g => g.ToString());
     }
-    private async Task<IEnumerable<Game>> GetInternalSummary()
+    public async Task<IEnumerable<Game>> GetSummary()
     {
         return await Repository.GetAllAsync();
     }

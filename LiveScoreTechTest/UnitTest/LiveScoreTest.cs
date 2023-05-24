@@ -8,10 +8,10 @@ namespace UnitTest;
 
 public class LiveScoreTest
 {
-    private LiveScore _liveScore;
+    private LiveScoreGame _liveScoreGame;
     public LiveScoreTest()
     {
-        _liveScore = new LiveScore(new MemoryRepository());
+        _liveScoreGame = new LiveScoreGame(new MemoryRepository());
     }
     
     [Fact]
@@ -21,9 +21,9 @@ public class LiveScoreTest
         var game = new Game("t1", "t2");
         
         //Act
-        var notCGame = _liveScore.AreLiveScore();
-        _liveScore.SetCurrentGame(game);
-        var yesCGame = _liveScore.AreLiveScore();
+        var notCGame = _liveScoreGame.AreLiveScore();
+        _liveScoreGame.SetCurrentGame(game);
+        var yesCGame = _liveScoreGame.AreLiveScore();
         
         //Asserts
         Assert.False(notCGame);
@@ -36,11 +36,11 @@ public class LiveScoreTest
         //Arrange
         var game1 = new Game("t1", "t2");
         var game2 = new Game("t3", "t4");
-        _liveScore.SetCurrentGame(game1);
+        _liveScoreGame.SetCurrentGame(game1);
         
         //Act
-        _liveScore.SetCurrentGame(game2);
-        var isFirstGame = _liveScore.CheckCurrentGame(game1.GameId);
+        _liveScoreGame.SetCurrentGame(game2);
+        var isFirstGame = _liveScoreGame.CheckCurrentGame(game1.GameId);
         //Asserts
         Assert.True(isFirstGame);
     }
@@ -48,7 +48,7 @@ public class LiveScoreTest
     [Fact]
     public void LiveScore_Not_Game_Update()
     {
-        Assert.False(_liveScore.UpdateScore(2, 1));
+        Assert.False(_liveScoreGame.UpdateScore(2, 1));
     }
     
     [Fact]
@@ -56,13 +56,13 @@ public class LiveScoreTest
     {
         //Arrange
         var game = new Game("t1", "t2");
-        _liveScore.SetCurrentGame(game);
+        _liveScoreGame.SetCurrentGame(game);
         
         //Act
-        _liveScore.UpdateScore(2, 1);
+        _liveScoreGame.UpdateScore(2, 1);
         
         //Assert
-        Assert.Equal("t1 2 - 1 t2 - Live True", _liveScore.ShowScore());
+        Assert.Equal("t1 2 - 1 t2 - Live True", _liveScoreGame.ShowScore());
         
     }
     
@@ -71,14 +71,14 @@ public class LiveScoreTest
     {
         //Arrange
         var game = new Game("t1", "t2");
-        _liveScore.SetCurrentGame(game);
+        _liveScoreGame.SetCurrentGame(game);
         
         //Act
-        _liveScore.FinishMatch();
-        var summary = _liveScore.GetSummary();
+        _liveScoreGame.FinishMatch();
+        var summary = _liveScoreGame.GetSummaryStr();
         
         //Assert
-        Assert.False(_liveScore.AreLiveScore());
+        Assert.False(_liveScoreGame.AreLiveScore());
         Assert.Equal("t1 0 - 0 t2 - Live False" , summary.First());
         
     }
@@ -92,13 +92,13 @@ public class LiveScoreTest
         
         foreach (var game in games.Games)
         {
-            _liveScore.SetCurrentGame(game);
+            _liveScoreGame.SetCurrentGame(game);
             if (game.GameId != games.Games.Last().GameId)
-                _liveScore.FinishMatch();
+                _liveScoreGame.FinishMatch();
         }
         
         //Act
-        var summary = _liveScore.GetSummary();
+        var summary = _liveScoreGame.GetSummaryStr();
         
         //Assert
         
