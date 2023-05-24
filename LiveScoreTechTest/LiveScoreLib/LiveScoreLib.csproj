@@ -10,4 +10,8 @@
       <Folder Include="Application\" />
     </ItemGroup>
 
+    <ItemGroup>
+        <InternalsVisibleTo Include="UnitTest" />
+    </ItemGroup>
+    
 </Project>
