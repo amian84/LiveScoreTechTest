@@ -1,4 +1,4 @@
-namespace LiveScoreLib.Application;
+namespace LiveScoreLib.Application.Abstractions;
 
 internal interface IRepository<T>
 {
