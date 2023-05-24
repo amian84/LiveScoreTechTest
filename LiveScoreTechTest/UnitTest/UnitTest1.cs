@@ -1,0 +1,20 @@
+using LiveScoreLib.Domain;
+
+namespace UnitTest;
+
+public class UnitTest1
+{
+    [Theory]
+    [InlineData("team1", "team2",true, 0,1)]
+    [InlineData("team2", "team1",false, 2,3)]
+    [InlineData("team4", "team3",true, 1,4)]
+    public void GameCreatedOk(string homeTeam, string awayTeam, bool finished, int homeGoals, int awayGoals)
+    {
+        var game = new Game(homeTeam, awayTeam, finished, homeGoals, awayGoals);
+        Assert.Equal(game.HomeTeam, homeTeam);
+        Assert.Equal(game.AwayTeam, awayTeam);
+        Assert.Equal(game.IsFinish(), finished);
+        Assert.Equal(game.HomeScore, homeGoals);
+        Assert.Equal(game.AwayScore, awayGoals);
+    }
+}
