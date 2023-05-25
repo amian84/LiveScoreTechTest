@@ -2,7 +2,7 @@ using LiveScoreLib.Domain;
 
 namespace LiveScoreLib.Application;
 
-internal class GameComparer:IComparer<Game>
+internal class GameComparer:IComparer<Game?>
 {
     public int Compare(Game? x, Game? y)
     {
