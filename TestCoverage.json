@@ -1,0 +1,1374 @@
+﻿{
+  "DotCoverVersion": "2023.1.2",
+  "Kind": "SolutionRoot",
+  "CoveredStatements": 400,
+  "TotalStatements": 403,
+  "CoveragePercent": 99,
+  "Children": [
+    {
+      "Kind": "Project",
+      "Name": "LiveScoreLib",
+      "CoveredStatements": 216,
+      "TotalStatements": 216,
+      "CoveragePercent": 100,
+      "Children": [
+        {
+          "Kind": "Namespace",
+          "Name": "LiveScoreLib",
+          "CoveredStatements": 216,
+          "TotalStatements": 216,
+          "CoveragePercent": 100,
+          "Children": [
+            {
+              "Kind": "Namespace",
+              "Name": "Application",
+              "CoveredStatements": 107,
+              "TotalStatements": 107,
+              "CoveragePercent": 100,
+              "Children": [
+                {
+                  "Kind": "Namespace",
+                  "Name": "Exceptions",
+                  "CoveredStatements": 8,
+                  "TotalStatements": 8,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "Type",
+                      "Name": "ExceptionHandler<TRequest,TResponse,TException>",
+                      "CoveredStatements": 5,
+                      "TotalStatements": 5,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Method",
+                          "Name": "Handle(TRequest,TException,RequestExceptionHandlerState<TResponse>,CancellationToken):Task",
+                          "CoveredStatements": 5,
+                          "TotalStatements": 5,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Type",
+                      "Name": "LiveScoreLibException",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Constructor",
+                          "Name": "LiveScoreLibException(string)",
+                          "CoveredStatements": 3,
+                          "TotalStatements": 3,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Namespace",
+                  "Name": "UseCases",
+                  "CoveredStatements": 56,
+                  "TotalStatements": 56,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "Namespace",
+                      "Name": "Validators",
+                      "CoveredStatements": 10,
+                      "TotalStatements": 10,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Type",
+                          "Name": "CreateMatchValidator",
+                          "CoveredStatements": 5,
+                          "TotalStatements": 5,
+                          "CoveragePercent": 100,
+                          "Children": [
+                            {
+                              "Kind": "Constructor",
+                              "Name": "CreateMatchValidator()",
+                              "CoveredStatements": 5,
+                              "TotalStatements": 5,
+                              "CoveragePercent": 100
+                            }
+                          ]
+                        },
+                        {
+                          "Kind": "Type",
+                          "Name": "UpdateScoreValidator",
+                          "CoveredStatements": 5,
+                          "TotalStatements": 5,
+                          "CoveragePercent": 100,
+                          "Children": [
+                            {
+                              "Kind": "Constructor",
+                              "Name": "UpdateScoreValidator()",
+                              "CoveredStatements": 5,
+                              "TotalStatements": 5,
+                              "CoveragePercent": 100
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Type",
+                      "Name": "CreateMatch",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Constructor",
+                          "Name": "CreateMatch(string,string)",
+                          "CoveredStatements": 3,
+                          "TotalStatements": 3,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Type",
+                      "Name": "CreateMatchHandler",
+                      "CoveredStatements": 13,
+                      "TotalStatements": 13,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Constructor",
+                          "Name": "CreateMatchHandler(IScore<Game>)",
+                          "CoveredStatements": 4,
+                          "TotalStatements": 4,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "Method",
+                          "Name": "Handle(CreateMatch,CancellationToken):Task<CustomResult>",
+                          "CoveredStatements": 9,
+                          "TotalStatements": 9,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Type",
+                      "Name": "FinishGame",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Constructor",
+                          "Name": "FinishGame()",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Type",
+                      "Name": "FinishGameHandler",
+                      "CoveredStatements": 11,
+                      "TotalStatements": 11,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Constructor",
+                          "Name": "FinishGameHandler(IScore<Game>)",
+                          "CoveredStatements": 4,
+                          "TotalStatements": 4,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "Method",
+                          "Name": "Handle(FinishGame,CancellationToken):Task<CustomResult>",
+                          "CoveredStatements": 7,
+                          "TotalStatements": 7,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Type",
+                      "Name": "GetSummary",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Constructor",
+                          "Name": "GetSummary()",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Type",
+                      "Name": "GetSummaryHandler",
+                      "CoveredStatements": 7,
+                      "TotalStatements": 7,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Constructor",
+                          "Name": "GetSummaryHandler(IScore<Game>)",
+                          "CoveredStatements": 4,
+                          "TotalStatements": 4,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "Method",
+                          "Name": "Handle(GetSummary,CancellationToken):Task<CustomResult>",
+                          "CoveredStatements": 3,
+                          "TotalStatements": 3,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Type",
+                      "Name": "UpdateScore",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Constructor",
+                          "Name": "UpdateScore(int,int)",
+                          "CoveredStatements": 3,
+                          "TotalStatements": 3,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Type",
+                      "Name": "UpdateScoreHandler",
+                      "CoveredStatements": 7,
+                      "TotalStatements": 7,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "Constructor",
+                          "Name": "UpdateScoreHandler(IScore<Game>)",
+                          "CoveredStatements": 4,
+                          "TotalStatements": 4,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "Method",
+                          "Name": "Handle(UpdateScore,CancellationToken):Task<CustomResult>",
+                          "CoveredStatements": 3,
+                          "TotalStatements": 3,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Type",
+                  "Name": "CustomResult",
+                  "CoveredStatements": 13,
+                  "TotalStatements": 13,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "Constructor",
+                      "Name": "CustomResult(bool)",
+                      "CoveredStatements": 4,
+                      "TotalStatements": 4,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "Exception:Exception",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Property",
+                      "Name": "IsFailed:bool",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "IsSuccess:bool",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "Fail(Exception):CustomResult",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "GetExceptionMessage():string",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "GetValue<T>():T",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "Success(object):CustomResult",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Type",
+                  "Name": "GameComparer",
+                  "CoveredStatements": 15,
+                  "TotalStatements": 15,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "Method",
+                      "Name": "Compare(Game,Game):int",
+                      "CoveredStatements": 15,
+                      "TotalStatements": 15,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Type",
+                  "Name": "ValidationBehavior<TRequest,TResponse>",
+                  "CoveredStatements": 15,
+                  "TotalStatements": 15,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "Constructor",
+                      "Name": "ValidationBehavior(IEnumerable<IValidator<TRequest>>)",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "Handle(TRequest,RequestHandlerDelegate<TResponse>,CancellationToken):Task<TResponse>",
+                      "CoveredStatements": 13,
+                      "TotalStatements": 13,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "InternalCompiledMethod",
+                          "Name": "MoveNext():void",
+                          "CoveredStatements": 13,
+                          "TotalStatements": 13,
+                          "CoveragePercent": 100,
+                          "Children": [
+                            {
+                              "Kind": "OwnCoverage",
+                              "CoveredStatements": 10,
+                              "TotalStatements": 10,
+                              "CoveragePercent": 100
+                            },
+                            {
+                              "Kind": "AnonymousMethod",
+                              "Name": "(IValidator<TRequest>):Task<ValidationResult>",
+                              "CoveredStatements": 1,
+                              "TotalStatements": 1,
+                              "CoveragePercent": 100
+                            },
+                            {
+                              "Kind": "AnonymousMethod",
+                              "Name": "(ValidationResult):IEnumerable<ValidationFailure>",
+                              "CoveredStatements": 1,
+                              "TotalStatements": 1,
+                              "CoveragePercent": 100
+                            },
+                            {
+                              "Kind": "AnonymousMethod",
+                              "Name": "(ValidationFailure):bool",
+                              "CoveredStatements": 1,
+                              "TotalStatements": 1,
+                              "CoveragePercent": 100
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Kind": "Namespace",
+              "Name": "Domain",
+              "CoveredStatements": 86,
+              "TotalStatements": 86,
+              "CoveragePercent": 100,
+              "Children": [
+                {
+                  "Kind": "Type",
+                  "Name": "Game",
+                  "CoveredStatements": 44,
+                  "TotalStatements": 44,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "Constructor",
+                      "Name": "Game(string,string,bool,int,int)",
+                      "CoveredStatements": 10,
+                      "TotalStatements": 10,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "AwayScore:int",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "AwayTeam:string",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertyInitOnlySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "Finished:bool",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "GameId:string",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertyInitOnlySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "HomeScore:int",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "HomeTeam:string",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertyInitOnlySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "StartGame:DateTime",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertyInitOnlySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "FinishMatch():void",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "IncreaseScore(TeamType):void",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "IsFinish():bool",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "SetLive():void",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "ToString():string",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "TotalScore():int",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "UpdateScore(int,int):void",
+                      "CoveredStatements": 4,
+                      "TotalStatements": 4,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Type",
+                  "Name": "LiveScoreGame",
+                  "CoveredStatements": 42,
+                  "TotalStatements": 42,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "Constructor",
+                      "Name": "LiveScoreGame(IRepository<Game>)",
+                      "CoveredStatements": 4,
+                      "TotalStatements": 4,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "CurrentGame:Game",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "Repository:IRepository<Game>",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "AreLiveScore():bool",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "CheckCurrentGame(string):bool",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "FinishMatch():void",
+                      "CoveredStatements": 4,
+                      "TotalStatements": 4,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "GetSummary():IEnumerable<string>",
+                      "CoveredStatements": 5,
+                      "TotalStatements": 5,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "OwnCoverage",
+                          "CoveredStatements": 4,
+                          "TotalStatements": 4,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "AnonymousMethod",
+                          "Name": "(Game):string",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "GetSummaryInternal():Task<IEnumerable<Game>>",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "InternalCompiledMethod",
+                          "Name": "MoveNext():void",
+                          "CoveredStatements": 3,
+                          "TotalStatements": 3,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "SetCurrentGame(Game):void",
+                      "CoveredStatements": 8,
+                      "TotalStatements": 8,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "ShowScore():string",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "UpdateScore(int,int):bool",
+                      "CoveredStatements": 7,
+                      "TotalStatements": 7,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Kind": "Namespace",
+              "Name": "Extensions",
+              "CoveredStatements": 6,
+              "TotalStatements": 6,
+              "CoveragePercent": 100,
+              "Children": [
+                {
+                  "Kind": "Type",
+                  "Name": "LiveScoreExtensions",
+                  "CoveredStatements": 6,
+                  "TotalStatements": 6,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "Method",
+                      "Name": "AddLiveScoreExtensions(IServiceCollection):IServiceCollection",
+                      "CoveredStatements": 6,
+                      "TotalStatements": 6,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "OwnCoverage",
+                          "CoveredStatements": 3,
+                          "TotalStatements": 3,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "AnonymousMethod",
+                          "Name": "(MediatRServiceConfiguration):void",
+                          "CoveredStatements": 3,
+                          "TotalStatements": 3,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Kind": "Namespace",
+              "Name": "Infrastructure",
+              "CoveredStatements": 17,
+              "TotalStatements": 17,
+              "CoveragePercent": 100,
+              "Children": [
+                {
+                  "Kind": "Type",
+                  "Name": "MemoryRepository",
+                  "CoveredStatements": 17,
+                  "TotalStatements": 17,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "Constructor",
+                      "Name": "MemoryRepository()",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "InMemoryDb:ConcurrentDictionary<string,Game>",
+                      "CoveredStatements": 1,
+                      "TotalStatements": 1,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "Exists(Game):Task<bool>",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "GetAllAsync():Task<IEnumerable<Game>>",
+                      "CoveredStatements": 4,
+                      "TotalStatements": 4,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "OwnCoverage",
+                          "CoveredStatements": 3,
+                          "TotalStatements": 3,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "AnonymousMethod",
+                          "Name": "(Game):Game",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "TryAddAsync(Game):Task<bool>",
+                      "CoveredStatements": 3,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 100
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "TryRemoveAsync(Game):Task<bool>",
+                      "CoveredStatements": 5,
+                      "TotalStatements": 5,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "OwnCoverage",
+                          "CoveredStatements": 4,
+                          "TotalStatements": 4,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "AnonymousMethod",
+                          "Name": "(KeyValuePair<string,Game>):bool",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Kind": "Project",
+      "Name": "UnitTest",
+      "CoveredStatements": 184,
+      "TotalStatements": 187,
+      "CoveragePercent": 98,
+      "Children": [
+        {
+          "Kind": "Namespace",
+          "Name": "UnitTest",
+          "CoveredStatements": 184,
+          "TotalStatements": 187,
+          "CoveragePercent": 98,
+          "Children": [
+            {
+              "Kind": "Namespace",
+              "Name": "ClassesData",
+              "CoveredStatements": 10,
+              "TotalStatements": 13,
+              "CoveragePercent": 77,
+              "Children": [
+                {
+                  "Kind": "Type",
+                  "Name": "ListGamesData",
+                  "CoveredStatements": 6,
+                  "TotalStatements": 9,
+                  "CoveragePercent": 67,
+                  "Children": [
+                    {
+                      "Kind": "Method",
+                      "Name": "GetEnumerator():IEnumerator<object[]>",
+                      "CoveredStatements": 6,
+                      "TotalStatements": 6,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "InternalCompiledMethod",
+                          "Name": "MoveNext():bool",
+                          "CoveredStatements": 6,
+                          "TotalStatements": 6,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "Method",
+                      "Name": "System.Collections.IEnumerable.GetEnumerator():IEnumerator",
+                      "CoveredStatements": 0,
+                      "TotalStatements": 3,
+                      "CoveragePercent": 0
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Type",
+                  "Name": "ListOfGamesData",
+                  "CoveredStatements": 4,
+                  "TotalStatements": 4,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "Games:List<Game>",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    },
+                    {
+                      "Kind": "AutoProperty",
+                      "Name": "OrderedGames:List<string>",
+                      "CoveredStatements": 2,
+                      "TotalStatements": 2,
+                      "CoveragePercent": 100,
+                      "Children": [
+                        {
+                          "Kind": "PropertyGetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        },
+                        {
+                          "Kind": "PropertySetter",
+                          "CoveredStatements": 1,
+                          "TotalStatements": 1,
+                          "CoveragePercent": 100
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Kind": "Type",
+              "Name": "GameTest",
+              "CoveredStatements": 38,
+              "TotalStatements": 38,
+              "CoveragePercent": 100,
+              "Children": [
+                {
+                  "Kind": "Method",
+                  "Name": "Game_Created_Ok(string,string,bool,int,int):void",
+                  "CoveredStatements": 9,
+                  "TotalStatements": 9,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Game_Increase_Score(TeamType):void",
+                  "CoveredStatements": 5,
+                  "TotalStatements": 5,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Game_Null_Game(bool):void",
+                  "CoveredStatements": 8,
+                  "TotalStatements": 8,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Game_ToString(int,int,string):void",
+                  "CoveredStatements": 5,
+                  "TotalStatements": 5,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Game_Total_Score(int,int,int):void",
+                  "CoveredStatements": 5,
+                  "TotalStatements": 5,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Game_Update_Score(int,int):void",
+                  "CoveredStatements": 6,
+                  "TotalStatements": 6,
+                  "CoveragePercent": 100
+                }
+              ]
+            },
+            {
+              "Kind": "Type",
+              "Name": "LiveScoreTest",
+              "CoveredStatements": 51,
+              "TotalStatements": 51,
+              "CoveragePercent": 100,
+              "Children": [
+                {
+                  "Kind": "Constructor",
+                  "Name": "LiveScoreTest()",
+                  "CoveredStatements": 4,
+                  "TotalStatements": 4,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "LiveScore_Check_Current_Game():void",
+                  "CoveredStatements": 8,
+                  "TotalStatements": 8,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "LiveScore_FinishMatch():void",
+                  "CoveredStatements": 8,
+                  "TotalStatements": 8,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "LiveScore_Game_Update():void",
+                  "CoveredStatements": 6,
+                  "TotalStatements": 6,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "LiveScore_New_Match_Current_Live():void",
+                  "CoveredStatements": 8,
+                  "TotalStatements": 8,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "LiveScore_Not_Game_Update():void",
+                  "CoveredStatements": 3,
+                  "TotalStatements": 3,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "LiveScore_Summary(ListOfGamesData):void",
+                  "CoveredStatements": 14,
+                  "TotalStatements": 14,
+                  "CoveragePercent": 100
+                }
+              ]
+            },
+            {
+              "Kind": "Type",
+              "Name": "MediatorTest",
+              "CoveredStatements": 66,
+              "TotalStatements": 66,
+              "CoveragePercent": 100,
+              "Children": [
+                {
+                  "Kind": "Constructor",
+                  "Name": "MediatorTest()",
+                  "CoveredStatements": 7,
+                  "TotalStatements": 7,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Create_Match():Task",
+                  "CoveredStatements": 4,
+                  "TotalStatements": 4,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "InternalCompiledMethod",
+                      "Name": "MoveNext():void",
+                      "CoveredStatements": 4,
+                      "TotalStatements": 4,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Create_Match_Empty_Team():Task",
+                  "CoveredStatements": 5,
+                  "TotalStatements": 5,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "InternalCompiledMethod",
+                      "Name": "MoveNext():void",
+                      "CoveredStatements": 5,
+                      "TotalStatements": 5,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Create_Match_Without_Finish():Task",
+                  "CoveredStatements": 6,
+                  "TotalStatements": 6,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "InternalCompiledMethod",
+                      "Name": "MoveNext():void",
+                      "CoveredStatements": 6,
+                      "TotalStatements": 6,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Finish_Match_With_Live():Task",
+                  "CoveredStatements": 6,
+                  "TotalStatements": 6,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "InternalCompiledMethod",
+                      "Name": "MoveNext():void",
+                      "CoveredStatements": 6,
+                      "TotalStatements": 6,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Finish_Match_Without_Live():Task",
+                  "CoveredStatements": 5,
+                  "TotalStatements": 5,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "InternalCompiledMethod",
+                      "Name": "MoveNext():void",
+                      "CoveredStatements": 5,
+                      "TotalStatements": 5,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Get_Summary(ListOfGamesData):Task",
+                  "CoveredStatements": 16,
+                  "TotalStatements": 16,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "InternalCompiledMethod",
+                      "Name": "MoveNext():void",
+                      "CoveredStatements": 16,
+                      "TotalStatements": 16,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Update_Score_Negative_Score():Task",
+                  "CoveredStatements": 6,
+                  "TotalStatements": 6,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "InternalCompiledMethod",
+                      "Name": "MoveNext():void",
+                      "CoveredStatements": 6,
+                      "TotalStatements": 6,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Update_Score_With_Live():Task",
+                  "CoveredStatements": 6,
+                  "TotalStatements": 6,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "InternalCompiledMethod",
+                      "Name": "MoveNext():void",
+                      "CoveredStatements": 6,
+                      "TotalStatements": 6,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Update_Score_Without_Live():Task",
+                  "CoveredStatements": 5,
+                  "TotalStatements": 5,
+                  "CoveragePercent": 100,
+                  "Children": [
+                    {
+                      "Kind": "InternalCompiledMethod",
+                      "Name": "MoveNext():void",
+                      "CoveredStatements": 5,
+                      "TotalStatements": 5,
+                      "CoveragePercent": 100
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Kind": "Type",
+              "Name": "RepositoryTest",
+              "CoveredStatements": 19,
+              "TotalStatements": 19,
+              "CoveragePercent": 100,
+              "Children": [
+                {
+                  "Kind": "Constructor",
+                  "Name": "RepositoryTest()",
+                  "CoveredStatements": 5,
+                  "TotalStatements": 5,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Add_Element():void",
+                  "CoveredStatements": 4,
+                  "TotalStatements": 4,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Exists_Element():void",
+                  "CoveredStatements": 4,
+                  "TotalStatements": 4,
+                  "CoveragePercent": 100
+                },
+                {
+                  "Kind": "Method",
+                  "Name": "Remove_Element():void",
+                  "CoveredStatements": 6,
+                  "TotalStatements": 6,
+                  "CoveragePercent": 100
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
