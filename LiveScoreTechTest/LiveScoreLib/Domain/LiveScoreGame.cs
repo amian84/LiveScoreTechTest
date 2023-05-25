@@ -20,6 +20,7 @@ internal class LiveScoreGame : IScore<Game>
         Repository.TryAddAsync(game);
         CurrentGame?.FinishMatch();
         CurrentGame = game;
+        CurrentGame.SetLive();
     }
 
     public void FinishMatch()

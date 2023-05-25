@@ -54,4 +54,9 @@ internal class Game
     {
         Finished = false;
     }
+
+    public void SetLive()
+    {
+        Finished = false;
+    }
 }
