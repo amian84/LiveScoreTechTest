@@ -42,7 +42,7 @@ internal class Game
 
     public override string ToString()
     {
-        return $"{HomeTeam} {HomeScore} - {AwayScore} {AwayTeam} - Live {Finished}";
+        return $"{HomeTeam} {HomeScore} - {AwayScore} {AwayTeam} - Live {!IsFinish()}";
     }
 
     public int TotalScore()
@@ -52,7 +52,7 @@ internal class Game
 
     public void FinishMatch()
     {
-        Finished = false;
+        Finished = true;
     }
 
     public void SetLive()
