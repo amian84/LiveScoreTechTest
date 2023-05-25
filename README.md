@@ -27,11 +27,11 @@ We have a solution with the Library. That solution was implemented using JetBrai
 
 Also I use a pattern to dont throw Exception, instead of I return Result object with status result of call and exception inside it if result fails.
 
-###Assumptions made
+### Assumptions made
 
 Only can be a one game in LiveScore, if you try to start other game you must finish first the current game
 
-##UnitTest
+## UnitTest
 
 There are a class test for each "part" of library to testing, I have 100% coverage. I use xunit test using Fact, Theory with inlines data and also ClassData for summary testing.
 
