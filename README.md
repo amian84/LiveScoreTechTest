@@ -9,7 +9,7 @@ We have a solution with the Library. That solution was implemented using JetBrai
  - **LiveScoreLib**: Project with complete library
  - **UnitTest**: Project with all unittest about library
  
- ##LiveScoreLib
+ ## LiveScoreLib
  Project develop using TDD and CleanCode, applying SOLID Principles. For implementation I use library MediatR, that library is a simple mediator implemented in .Net to process messages without any dependencies based on request/response.
  
  I implment extension for DI, if  you want to use my library in a project with DI you just initialize injections using that extension in your IOC.
