@@ -6,5 +6,5 @@ public interface IScore<T>
     public void FinishMatch();
     public bool AreLiveScore();
     public bool UpdateScore(int homeScore, int awayScore);
-    public Task<IEnumerable<T>> GetSummary();
+    public IEnumerable<string> GetSummary();
 }

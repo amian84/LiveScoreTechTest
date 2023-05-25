@@ -44,18 +44,18 @@ internal class LiveScoreGame : IScore<Game>
         return true;
     }
 
-    public IEnumerable<string> GetSummaryStr()
+    public IEnumerable<string> GetSummary()
     {
-        var internalSummary = GetSummary().Result;
+        var internalSummary = GetSummaryInternal().Result;
         return internalSummary.Order(new GameComparer()).Reverse().Select(g => g.ToString());
     }
-    public async Task<IEnumerable<Game>> GetSummary()
+    private async Task<IEnumerable<Game>> GetSummaryInternal()
     {
         return await Repository.GetAllAsync();
     }
 
     public bool CheckCurrentGame(string gameId)
     {
-        return CurrentGame.GameId == gameId;
+        return CurrentGame?.GameId == gameId;
     }
 }
