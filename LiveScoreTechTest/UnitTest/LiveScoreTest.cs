@@ -1,5 +1,3 @@
-using FluentAssertions;
-using LiveScoreLib.Application;
 using LiveScoreLib.Domain;
 using LiveScoreLib.Infrastructure;
 using UnitTest.ClassesData;
@@ -75,7 +73,7 @@ public class LiveScoreTest
         
         //Act
         _liveScoreGame.FinishMatch();
-        var summary = _liveScoreGame.GetSummaryStr();
+        var summary = _liveScoreGame.GetSummary();
         
         //Assert
         Assert.False(_liveScoreGame.AreLiveScore());
@@ -98,11 +96,11 @@ public class LiveScoreTest
         }
         
         //Act
-        var summary = _liveScoreGame.GetSummaryStr();
+        var summary = _liveScoreGame.GetSummary().ToList();
         
         //Assert
         
-        Assert.Equal(games.OrderedGames.Count, summary.Count());
+        Assert.Equal(games.OrderedGames.Count, summary.Count);
         Assert.True(summary.SequenceEqual(games.OrderedGames));
         
         
