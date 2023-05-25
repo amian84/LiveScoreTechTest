@@ -11,7 +11,7 @@ public class RepositoryTest
     public RepositoryTest()
     {
         _repository = new MemoryRepository();
-        _game = new Game("t1", "t2");
+        _game = new Game("t1", "t2", false);
     }
     [Fact]
     public void Add_Element()
