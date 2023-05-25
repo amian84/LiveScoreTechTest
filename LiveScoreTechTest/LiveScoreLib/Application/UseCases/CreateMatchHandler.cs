@@ -1,4 +1,3 @@
-using LanguageExt.Common;
 using LiveScoreLib.Application.Abstractions;
 using LiveScoreLib.Application.Exceptions;
 using LiveScoreLib.Domain;
@@ -6,9 +5,9 @@ using MediatR;
 
 namespace LiveScoreLib.Application.UseCases;
 
-public record CreateMatch(string HomeTeam, string AwayTeam) : IRequest<Result<string?>>;
+public record CreateMatch(string HomeTeam, string AwayTeam) : IRequest<CustomResult>;
 
-internal class CreateMatchHandler : IRequestHandler<CreateMatch, Result<string>>
+internal class CreateMatchHandler : IRequestHandler<CreateMatch, CustomResult>
 {
     
     private readonly IScore<Game> _liveScoreGame;
@@ -17,15 +16,15 @@ internal class CreateMatchHandler : IRequestHandler<CreateMatch, Result<string>>
     {
         _liveScoreGame = liveScore;
     }
-    public Task<Result<string>> Handle(CreateMatch request, CancellationToken cancellationToken)
+    public Task<CustomResult> Handle(CreateMatch request, CancellationToken cancellationToken)
     {
         if (_liveScoreGame.AreLiveScore())
         {
             var error = new LiveScoreLibException("There are a currently match");
-            return Task.FromResult(new Result<string>(error));
+            return Task.FromResult(CustomResult.Fail(error));
         }
         var game = new Game(request.HomeTeam, request.AwayTeam);
         _liveScoreGame.SetCurrentGame(game);
-        return Task.FromResult(new Result<string>(game.GameId));
+        return Task.FromResult(CustomResult.Success(game.GameId));
     }
 }
