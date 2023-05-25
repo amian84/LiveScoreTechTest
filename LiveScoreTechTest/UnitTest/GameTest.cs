@@ -1,3 +1,4 @@
+using LiveScoreLib.Application;
 using LiveScoreLib.Domain;
 namespace UnitTest;
 
@@ -69,11 +70,28 @@ public class GameTest
     public void Game_ToString(int homeScore, int awayScore, string expected)
     {
         //Arrange
-        var game = new Game("team1", "team2", true, homeScore, awayScore);
+        var game = new Game("team1", "team2", false, homeScore, awayScore);
         //Act
         var gameStr = game.ToString();
         //Assert
         Assert.Equal(expected, gameStr);
+    }
+    
+    [Theory]
+    [InlineData(true)]
+    [InlineData(false)]
+    public void Game_Null_Game(bool g1null)
+    {
+        //Arrange
+        var game = new Game("team1", "team2");
+        //Act
+        var list = new List<Game?>();
+        list.Add(g1null ? null : game);
+        list.Add(g1null ? game : null);
+
+        list.Sort(new GameComparer());
+        //Assert
+        Assert.Equal(game, list[1]);
     }
     
     
