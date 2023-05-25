@@ -19,8 +19,8 @@ public class ListGamesData : IEnumerable<object[]>
             {
                 Games = new List<Game>()
                 {
-                    new ("t1","t2", true, 1, 1),
-                    new ("t3","t4", true, 3, 2)    
+                    new ("t1","t2", false, 1, 1),
+                    new ("t3","t4", false, 3, 2)    
                 },
                 OrderedGames = new List<string>()
                 {
@@ -37,8 +37,8 @@ public class ListGamesData : IEnumerable<object[]>
             {
                 Games = new List<Game>()
                 {
-                    new ("t3","t4", true, 1, 1),
-                    new ("t1","t2", true, 1, 1),
+                    new ("t3","t4", false, 1, 1),
+                    new ("t1","t2", false, 1, 1),
                 } ,
                 OrderedGames = new List<string>()
                 {
@@ -53,8 +53,8 @@ public class ListGamesData : IEnumerable<object[]>
             {
                 Games = new List<Game>()
                 {
-                    new ("t1","t2", true, 3, 2),        
-                    new ("t3","t4", true, 1, 8)
+                    new ("t1","t2", false, 3, 2),        
+                    new ("t3","t4", false, 1, 8)
                 },
                 OrderedGames = new List<string>()
                 {
@@ -71,12 +71,12 @@ public class ListGamesData : IEnumerable<object[]>
             {
                 Games = new List<Game>()
                 {
-                    new ("t1","t2", true, 3, 2),        
-                    new ("t3","t4", true, 2, 1),
-                    new ("t5","t6", true, 0, 4),        
-                    new ("t7","t8", true, 1,4),
-                    new ("t11","t12", true, 1, 2),
-                    new ("t9","t10", true, 8, 5),        
+                    new ("t1","t2", false, 3, 2),        
+                    new ("t3","t4", false, 2, 1),
+                    new ("t5","t6", false, 0, 4),        
+                    new ("t7","t8", false, 1,4),
+                    new ("t11","t12", false, 1, 2),
+                    new ("t9","t10", false, 8, 5),        
                 },
                 OrderedGames = new List<string>()
                 {
